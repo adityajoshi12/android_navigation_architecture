@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment" android:name="com.interwork.naviagtionarchitecture.HomeFragment"
+              android:label="fragment_home" tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_homeFragment_to_paymentFragment" app:destination="@id/paymentFragment"
+                app:enterAnim="@animator/slide_in" app:exitAnim="@animator/slide_out"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim" app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action android:id="@+id/action_homeFragment_to_settingFragment" app:destination="@id/settingFragment"
+                app:enterAnim="@animator/slide_in" app:exitAnim="@animator/slide_out"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim" app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment android:id="@+id/paymentFragment" android:name="com.interwork.naviagtionarchitecture.PaymentFragment"
+              android:label="fragment_payment" tools:layout="@layout/fragment_payment"/>
+    <fragment android:id="@+id/settingFragment" android:name="com.interwork.naviagtionarchitecture.SettingFragment"
+              android:label="fragment_setting" tools:layout="@layout/fragment_setting">
+        <action android:id="@+id/action_settingFragment_to_profileFragment2" app:destination="@id/profileFragment2"/>
+    </fragment>
+    <fragment android:id="@+id/profileFragment2" android:name="com.interwork.naviagtionarchitecture.ProfileFragment"
+              android:label="fragment_profile" tools:layout="@layout/fragment_profile"/>
+</navigation>
